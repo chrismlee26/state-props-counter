@@ -10,8 +10,14 @@ function App() {
     <div className="App">
       {count.map((val, i) => (
         <Counter
+          key={`counter-${i}`}
           label={`Counter: ${i}`}
           value={val}
+          deleteCount={() => {
+            const newCount = [...count]
+            newCount.splice(i, 1)
+            setCount(newCount)
+          }}
           increment={() => {
             const newCount = [...count]
             newCount[i] = val + 1

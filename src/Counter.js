@@ -1,13 +1,16 @@
 function Counter(props) {
 
-  const { label, value, increment, decrement } = props
+  const { label, value, increment, decrement, deleteCount } = props
 
   return (
     <div className="counter">
-      <p>{label}</p>
+      <p>
+        {label}
+        <button onClick={deleteCount}>Delete</button>
+      </p>
       <h1>{value}</h1>
-      <button onClick={() => decrement()}>-</button>
-      <button onClick={() => increment()} >+</button>
+      <button onClick={decrement}>-</button>
+      <button onClick={increment}>+</button>
     </div>
   )
 
