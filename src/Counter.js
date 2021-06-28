@@ -6,8 +6,8 @@ function Counter(props) {
     <div className="counter">
       <p>{label}</p>
       <h1>{value}</h1>
-      <button onClick={() => increment()} >+</button>
       <button onClick={() => decrement()}>-</button>
+      <button onClick={() => increment()} >+</button>
     </div>
   )
 
